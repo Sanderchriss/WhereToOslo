@@ -5,7 +5,22 @@
 
 &nbsp;
 
-WhereToOslo is an app created to explore your neighbourhood. Using the app, you are able to find local recommendations for stores, activites and places to eat.
+Welcome to WhereToOslo
+
+Discover your neighborhood like never before with WhereToOslo! Our app is your personalized guide to the best local spots for shopping, dining, and socializing. Whether you're a resident looking for hidden gems or a traveler exploring a new city, WhereToOslo has you covered.
+
+Key Features:
+
+🗺️ Interactive Maps: Navigate your city with ease using our interactive maps, highlighting handpicked recommendations for stores, cafés, restaurants, and bars.
+
+🌟 Curated Recommendations: Our team of locals curates a list of must-visit places, ensuring you experience the very best your community has to offer.
+
+📌 Customizable Lists: "Like" your favorite spots to create your own list!
+
+📲 Mobile Friendly: Access WhereToOslo on the go with our mobile-friendly design, making exploration easy and enjoyable.
+
+
+Join WhereToOslo and make every outing an adventure!
 
 
 ## Documentation
