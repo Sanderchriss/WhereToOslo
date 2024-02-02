@@ -3,6 +3,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
     "build": "npm run check && vite build",
+    "prettier": "prettier --write .",
     "check": "prettier --check . && tsc --noEmit",
     "prepare": "husky install"
   },
