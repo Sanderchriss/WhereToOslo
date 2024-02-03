@@ -1,12 +1,10 @@
-import { Map } from "ol";
 import React, { MutableRefObject, useEffect, useRef } from "react";
+import { Map } from "ol";
 
-export function ViewMap({ map }: { map: Map }) {
+export function MapView({ map }: { map: Map }) {
   const mapRef = useRef() as MutableRefObject<HTMLDivElement>;
-
   useEffect(() => {
     map.setTarget(mapRef.current);
-  }, []);
-
-  return <div ref={mapRef}></div>;
+  }, [map]);
+  return <main ref={mapRef} className={".map"}></main>;
 }

@@ -7,7 +7,7 @@ import "./application.css";
 
 useGeographic();
 const map = new Map({
-  view: new View({ center: [11, 60], zoom: 10, constrainResolution: true }),
+  view: new View({ center: [10.7522454, 59.9138688], zoom: 12, constrainResolution: true }),
   layers: [new TileLayer({ source: new OSM() })],
 });
 export function App() {
@@ -17,5 +17,5 @@ export function App() {
     map.setTarget(mapRef.current);
   }, []);
 
-  return <div ref={mapRef} style={{ width: "100vw", height: "100vh" }}></div>;
+  return <div ref={mapRef}></div>;
 }
