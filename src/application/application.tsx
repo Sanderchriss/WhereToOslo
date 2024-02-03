@@ -7,7 +7,11 @@ import "./application.css";
 
 useGeographic();
 const map = new Map({
-  view: new View({ center: [10.7522454, 59.9138688], zoom: 12, constrainResolution: true }),
+  view: new View({
+    center: [10.7522454, 59.9138688],
+    zoom: 12,
+    constrainResolution: true,
+  }),
   layers: [new TileLayer({ source: new OSM() })],
 });
 export function App() {
