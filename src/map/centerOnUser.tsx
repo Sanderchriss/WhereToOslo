@@ -33,9 +33,5 @@ export function CenterOnUser({ view, map }: { view: View; map: Map }) {
     );
   }
 
-  return (
-    <a href={"#"} onClick={handleClick}>
-      Center on me
-    </a>
-  );
+  return <button onClick={handleClick}>Center on me</button>;
 }
