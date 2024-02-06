@@ -9,7 +9,7 @@ dialog {
 #root {
   display: grid;
   height: 100dvh;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: 1fr auto auto;
 }
 
 header,

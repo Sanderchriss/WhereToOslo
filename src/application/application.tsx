@@ -9,7 +9,6 @@ import { useGeographic } from "ol/proj";
 import "ol/ol.css";
 import { Layer } from "ol/layer";
 import { CenterOnUser } from "../map/centerOnUser";
-import { MarkerCheckboxOverlay } from "../map/markerCheckbox";
 
 useGeographic();
 
@@ -46,11 +45,11 @@ export function App() {
 
   return (
     <>
+      <MapView map={map} />
       <header></header>
       <nav>
         <CenterOnUser view={map.getView()} map={map} />
       </nav>
-      <MapView map={map} />
     </>
   );
 }
