@@ -14,7 +14,7 @@ dialog {
 
 header,
 nav {
-  padding: 0.25rem;
+  padding: 0.4em;
   background-color: slategray;
 }
 
@@ -25,4 +25,10 @@ main {
 nav {
   display: flex;
   gap: 1em;
+  align-content: space-between;
+}
+.overlay {
+  background-color: #f5f5f5;
+  padding: 0.5em;
+  translate: -50% calc(-100% - 5px);
 }

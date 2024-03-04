@@ -10,21 +10,14 @@ export function CenterOnUser({ view, map }: { view: View; map: Map }) {
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         const { latitude, longitude } = pos.coords;
-
-        // Center the map on the user's location
         view.animate({ center: [longitude, latitude], zoom: 17 });
-
-        // Create a marker at the user's location
         const marker = new Feature(new Point([longitude, latitude]));
-
-        // Add the marker to a vector layer
         const vectorLayer = new VectorLayer({
           source: new VectorSource({
             features: [marker],
           }),
         });
 
-        // Add the vector layer to the map
         map.addLayer(vectorLayer);
       },
       (error) => {
