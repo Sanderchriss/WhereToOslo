@@ -12,22 +12,22 @@ import { GeoJSON } from "ol/format";
 import { MapBrowserEvent, Overlay } from "ol";
 import { FeatureLike } from "ol/Feature";
 import { map } from "../map/mapContext";
-import { activeCafeStyle, cafeFeature, cafeStyle } from "./cafeFeature";
+import { activeStoreStyle, storeFeature, storeStyle } from "./storeFeature";
 
-const cafeLayer = new VectorLayer({
-  className: "Cafe",
+const storeLayer = new VectorLayer({
+  className: "Store",
   source: new VectorSource({
-    url: "/WhereToOslo/cafe.geojson",
+    url: "/WhereToOslo/store.geojson",
     format: new GeoJSON(),
   }),
-  style: cafeStyle,
+  style: storeStyle,
 });
 
-export function Cafecheckbox() {
+export function Storecheckbox() {
   const [checked, setChecked] = useState(false);
 
-  CheckedLayers(cafeLayer, checked);
-  const [activeFeature, setActiveFeature] = useState<cafeFeature>();
+  CheckedLayers(storeLayer, checked);
+  const [activeFeature, setActiveFeature] = useState<storeFeature>();
   const overlay = useMemo(() => new Overlay({}), []);
   const overlayref = useRef() as MutableRefObject<HTMLDivElement>;
   useEffect(() => {
@@ -43,10 +43,10 @@ export function Cafecheckbox() {
     const features: FeatureLike[] = [];
     map.forEachFeatureAtPixel(e.pixel, (f) => features.push(f), {
       hitTolerance: 5,
-      layerFilter: (l) => l === cafeLayer,
+      layerFilter: (l) => l === storeLayer,
     });
     if (features.length === 1) {
-      setActiveFeature(features[0] as cafeFeature);
+      setActiveFeature(features[0] as storeFeature);
       overlay.setPosition(e.coordinate);
     } else {
       setActiveFeature(undefined);
@@ -55,7 +55,7 @@ export function Cafecheckbox() {
   }
 
   useEffect(() => {
-    activeFeature?.setStyle(activeCafeStyle);
+    activeFeature?.setStyle(activeStoreStyle);
     return () => activeFeature?.setStyle(undefined);
   }, [activeFeature]);
   useEffect(() => {
@@ -72,7 +72,7 @@ export function Cafecheckbox() {
           checked={checked}
           onChange={(e) => setChecked(e.target.checked)}
         />
-        {checked ? "Hide" : "Show"} Café
+        {checked ? "Hide" : "Show"} Stores
       </label>
       <div ref={overlayref} className={"overlay"}>
         {activeFeature && (

@@ -7,6 +7,9 @@ import TileLayer from "ol/layer/Tile";
 import { OSM } from "ol/source";
 import { CenterOnUser } from "../map/centerOnUser";
 import { Restaurantcheckbox } from "../restaurant/restaurantCheck";
+import { Cafecheckbox } from "../cafe/cafeCheckBox";
+import { Storecheckbox } from "../store/storeCheckbox";
+import { Activitycheckbox } from "../activity/activityCheckbox";
 
 export function Application() {
   const [layers, setLayers] = useState<Layer[]>([
@@ -27,6 +30,9 @@ export function Application() {
       <nav>
         <CenterOnUser view={map.getView()} map={map} />
         <Restaurantcheckbox />
+        <Cafecheckbox />
+        <Storecheckbox />
+        <Activitycheckbox />
       </nav>
     </MapContext.Provider>
   );

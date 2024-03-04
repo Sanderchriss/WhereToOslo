@@ -28,7 +28,7 @@ const restaurantLayer = new VectorLayer({
 });
 
 export function Restaurantcheckbox() {
-  const [checked, setChecked] = useState(true);
+  const [checked, setChecked] = useState(false);
 
   CheckedLayers(restaurantLayer, checked);
   const [activeFeature, setActiveFeature] = useState<restaurantFeature>();

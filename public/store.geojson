@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Steen & Strøm" },
+      "geometry": {
+        "coordinates": [10.743159509262341, 59.91201551130098],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Glassmagasinet" },
+      "geometry": {
+        "coordinates": [10.745734427502697, 59.91327409952876],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Paleet" },
+      "geometry": {
+        "coordinates": [10.73745188620748, 59.914371276520484],
+        "type": "Point"
+      }
+    }
+  ]
+}

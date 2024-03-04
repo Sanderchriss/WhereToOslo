@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Naturhistorisk Museum" },
+      "geometry": {
+        "coordinates": [10.771935313491184, 59.91931320657585],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Frammuseet" },
+      "geometry": {
+        "coordinates": [10.699487228837455, 59.903310047141474],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Latter scene" },
+      "geometry": {
+        "coordinates": [10.726605902105689, 59.91079278870873],
+        "type": "Point"
+      }
+    }
+  ]
+}
