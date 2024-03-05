@@ -1,6 +1,6 @@
 import { Feature } from "ol";
 import { Point } from "ol/geom";
-import { FeatureLike } from "ol/Feature";
+
 import { Style, Icon } from "ol/style";
 
 export interface restaurantProperties {
@@ -10,20 +10,20 @@ export interface restaurantProperties {
 export type restaurantFeature = {
   getproperties(): restaurantProperties;
 } & Feature<Point>;
-export const restaurantStyle = (feature: FeatureLike) => {
+export const restaurantStyle = () => {
   return new Style({
     image: new Icon({
-      src: "WhereToOslo/restaurPin.png",
+      src: "https://github.com/Sanderchriss/WhereToOslo/blob/master/public/restaurPin.png",
       anchor: [0.5, 1],
       scale: 0.05,
     }),
   });
 };
-export const activeRestaurantStyle = (feature: FeatureLike) => {
+export const activeRestaurantStyle = () => {
   //const resolution = map.getView().getResolutions();
   return new Style({
     image: new Icon({
-      src: "WhereToOslo/restaurPin.png",
+      src: "https://github.com/Sanderchriss/WhereToOslo/blob/master/public/restaurPin.png",
       anchor: [0.5, 1],
       scale: 0.05,
     }),
