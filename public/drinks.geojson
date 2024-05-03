@@ -1,0 +1,32 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Brygg" },
+      "geometry": {
+        "coordinates": [10.748415272617194, 59.9132126301447],
+        "type": "Point"
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Parkteateret" },
+      "geometry": {
+        "coordinates": [10.758363201926898, 59.92351053201796],
+        "type": "Point"
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Lektern" },
+      "geometry": {
+        "coordinates": [10.727965191226161, 59.90956805354443],
+        "type": "Point"
+      },
+      "id": 2
+    }
+  ]
+}

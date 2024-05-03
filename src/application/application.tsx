@@ -10,6 +10,7 @@ import { Restaurantcheckbox } from "../restaurant/restaurantCheck";
 import { Cafecheckbox } from "../cafe/cafeCheckBox";
 import { Storecheckbox } from "../store/storeCheckbox";
 import { Activitycheckbox } from "../activity/activityCheckbox";
+import { Drinkcheckbox } from "../drink/drinkCheck";
 
 export function Application() {
   const [layers, setLayers] = useState<Layer[]>([
@@ -33,6 +34,7 @@ export function Application() {
         <Cafecheckbox />
         <Storecheckbox />
         <Activitycheckbox />
+        <Drinkcheckbox />
       </nav>
     </MapContext.Provider>
   );
