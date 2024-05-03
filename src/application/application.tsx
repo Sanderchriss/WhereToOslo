@@ -3,19 +3,19 @@ import "./application.css";
 import "ol/ol.css";
 import { MapContext, map } from "../map/mapContext";
 import { Layer } from "ol/layer";
-import TileLayer from "ol/layer/Tile";
-import { OSM } from "ol/source";
 import { CenterOnUser } from "../map/centerOnUser";
 import { Restaurantcheckbox } from "../restaurant/restaurantCheck";
 import { Cafecheckbox } from "../cafe/cafeCheckBox";
 import { Storecheckbox } from "../store/storeCheckbox";
 import { Activitycheckbox } from "../activity/activityCheckbox";
 import { Drinkcheckbox } from "../drink/drinkCheck";
+import { MapboxVectorLayer } from "ol-mapbox-style";
 
 export function Application() {
   const [layers, setLayers] = useState<Layer[]>([
-    new TileLayer({
-      source: new OSM(),
+    new MapboxVectorLayer({
+      styleUrl: "mapbox://styles/mapbox/dark-v11",
+      accessToken: "MAPBOX_API_KEY",
     }),
   ]);
 
