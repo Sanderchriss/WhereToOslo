@@ -10,12 +10,15 @@ import { Storecheckbox } from "../store/storeCheckbox";
 import { Activitycheckbox } from "../activity/activityCheckbox";
 import { Drinkcheckbox } from "../drink/drinkCheck";
 import { MapboxVectorLayer } from "ol-mapbox-style";
+import TileLayer from "ol/layer/Tile";
+import { OSM } from "ol/source";
+import CategoryModal from "../navbar/categoryModal";
+import Top5Modal from "../navbar/top5Modal";
 
 export function Application() {
   const [layers, setLayers] = useState<Layer[]>([
-    new MapboxVectorLayer({
-      styleUrl: "mapbox://styles/mapbox/dark-v11",
-      accessToken: "MAPBOX_API_KEY",
+    new TileLayer({
+      source: new OSM(),
     }),
   ]);
 
@@ -27,14 +30,12 @@ export function Application() {
   return (
     <MapContext.Provider value={{ map, layers, setLayers }}>
       <div ref={mapRef}></div>
-      <header></header>
-      <nav>
+      <header>
         <CenterOnUser view={map.getView()} map={map} />
-        <Restaurantcheckbox />
-        <Cafecheckbox />
-        <Storecheckbox />
-        <Activitycheckbox />
-        <Drinkcheckbox />
+      </header>
+      <nav>
+        <CategoryModal />
+        <Top5Modal />
       </nav>
     </MapContext.Provider>
   );
