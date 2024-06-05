@@ -3,6 +3,8 @@ import { Point } from "ol/geom";
 import { Vector as VectorLayer } from "ol/layer";
 import { Vector as VectorSource } from "ol/source";
 import React from "react";
+import IconButton from "./iconsButton";
+import "../css/iconStyles.css";
 
 export function CenterOnUser({ view, map }: { view: View; map: Map }) {
   function handleClick(e: React.MouseEvent) {
@@ -26,5 +28,13 @@ export function CenterOnUser({ view, map }: { view: View; map: Map }) {
     );
   }
 
-  return <button onClick={handleClick}>Center on me</button>;
+  return (
+    <IconButton className="position-button" onClick={handleClick}>
+      <img
+        src="images/positionButton.svg"
+        alt="Position Icon"
+        className="icon"
+      />
+    </IconButton>
+  );
 }

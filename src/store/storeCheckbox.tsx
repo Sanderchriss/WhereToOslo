@@ -17,7 +17,7 @@ import { activeStoreStyle, storeFeature, storeStyle } from "./storeFeature";
 const storeLayer = new VectorLayer({
   className: "Store",
   source: new VectorSource({
-    url: "/WhereToOslo/store.geojson",
+    url: "/WhereToOslo/json/store.geojson",
     format: new GeoJSON(),
   }),
   style: storeStyle,

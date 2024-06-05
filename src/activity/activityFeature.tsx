@@ -24,7 +24,7 @@ export const activeActivityStyle = (feature: FeatureLike) => {
   //const resolution = map.getView().getResolutions();
   return new Style({
     image: new Icon({
-      src: "/WhereToOslo/activityPin.png",
+      src: "/WhereToOslo/activityPin_4.svg",
       anchor: [0.5, 1],
       scale: 0.06,
     }),

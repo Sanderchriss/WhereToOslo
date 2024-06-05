@@ -17,7 +17,7 @@ import { activeCafeStyle, cafeFeature, cafeStyle } from "./cafeFeature";
 const cafeLayer = new VectorLayer({
   className: "Cafe",
   source: new VectorSource({
-    url: "/WhereToOslo/cafe.geojson",
+    url: "/WhereToOslo/json/cafe.geojson",
     format: new GeoJSON(),
   }),
   style: cafeStyle,

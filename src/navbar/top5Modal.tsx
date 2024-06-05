@@ -25,7 +25,7 @@ const Top5Modal = () => {
         backdrop="static"
         keyboard={false}
       >
-        <Modal.Header closeButton>
+        <Modal.Header>
           <Modal.Title>Articles</Modal.Title>
         </Modal.Header>
         <Modal.Body>

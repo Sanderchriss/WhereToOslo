@@ -21,7 +21,7 @@ import {
 const restaurantLayer = new VectorLayer({
   className: "Restauranter",
   source: new VectorSource({
-    url: "/WhereToOslo/restaurants.geojson",
+    url: "/WhereToOslo/json/restaurants.geojson",
     format: new GeoJSON(),
   }),
   style: restaurantStyle,
